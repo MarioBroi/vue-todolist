@@ -1,4 +1,4 @@
-console.log('test');
+//console.log('test');
 
 const { createApp } = Vue
 createApp({
@@ -22,5 +22,9 @@ createApp({
         }
     },
     methods: {
+        removeTask(taskId) {
+            console.log('removing the task');
+            this.tasks.splice(taskId, 1)
+        }
     }
 }).mount('#app');
