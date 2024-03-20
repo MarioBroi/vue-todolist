@@ -27,11 +27,11 @@
             <h3>Tasks:</h3>
 
             <ul>
-                <li v-for="task in tasks">
+                <li v-for="(task,taskId) in tasks">
                     <span :class="{'done': task.done}">
                         {{task.text}}
                     </span>
-                    <i class="fa-regular fa-circle-xmark mar-3" @click="removeTask(index)"></i>
+                    <i class="fa-regular fa-circle-xmark mar-3" @click="removeTask(taskId)"></i>
                 </li>
             </ul>
         </div>
